@@ -12,6 +12,14 @@ button.forEach((b) => {
 
 })
 
+const ctaColor = document.querySelectorAll('.destination p')
+    ctaColor.forEach((text) => {
+        text.addEventListener('mouseover', (e) => {
+            e.target.style.color = 'orange';
+    })
+    
+    })
+
 //Alert when page loads
 
 window.addEventListener("load", (event) => {
@@ -19,9 +27,20 @@ window.addEventListener("load", (event) => {
     
 });
 
+//Nav color change on click
+
 const navLink = document.querySelectorAll('.nav-link');
 navLink.forEach((a) => {
     a.addEventListener('click', (e) => {
         e.target.style.color = 'orange';
     })
 })
+
+//Nav prevent Default
+
+const Nav = document.querySelectorAll('.nav-link');
+navLink.addEventListener('click', (e) => {
+    e.preventDefault();
+})
+
+
