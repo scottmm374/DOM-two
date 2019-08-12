@@ -64,6 +64,7 @@ logoAnimate.addEventListener('mouseenter', (e) => {
     e.target.classList.add('animated', 'tada');
 })
 
+
 //Img grow when you push Mousebutton down
 const imgAnimate = document.querySelectorAll('img')
 imgAnimate.forEach((img) => {
