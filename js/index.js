@@ -33,10 +33,10 @@ headings.forEach((text) => {
 
 //Alert when page loads
 
-window.addEventListener("load", (event) => {
-    alert("Welcome to the Fun Bus!");
+// window.addEventListener("load", (event) => {
+//     alert("Welcome to the Fun Bus!");
 
-});
+// });
 
 //Nav color change on click
 
@@ -50,10 +50,29 @@ navLink.forEach((a) => {
 
 
 
-//Resize 
+//Resize (look in console)
 
-window.addEventListener("resize", (event) => {
+window.addEventListener("resize", (e) => {
     console.log("reportWindowSize");
 });
+
+
+//Animations and more events
+
+const logoAnimate = document.querySelector('.nav-container h1')
+logoAnimate.addEventListener('mouseenter', (e) => {
+    e.target.classList.add('animated', 'tada');
+})
+
+//Img grow when you push Mousebutton down
+const imgAnimate = document.querySelectorAll('img')
+imgAnimate.forEach((img) => {
+    img.addEventListener('mousedown', (e) => {
+        e.target.classList.add('animated','heartBeat' );
+    })
+
+});
+
+
 
 
