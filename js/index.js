@@ -33,10 +33,10 @@ headings.forEach((text) => {
 
 //Alert when page loads
 
-// window.addEventListener("load", (event) => {
-//     alert("Welcome to the Fun Bus!");
+window.addEventListener("load", (event) => {
+    alert("Welcome to the Fun Bus!");
 
-// });
+});
 
 //Nav color change on click
 
@@ -62,6 +62,7 @@ window.addEventListener("resize", (e) => {
 const logoAnimate = document.querySelector('.nav-container h1')
 logoAnimate.addEventListener('mouseenter', (e) => {
     e.target.classList.add('animated', 'tada');
+    e.target.style.color = 'darkorange'
 })
 
 
@@ -73,6 +74,14 @@ imgAnimate.forEach((img) => {
     })
 
 });
+
+//when wheel scrolling, bounces in from left and turns Dark Pink
+const headTwo = document.querySelector('.intro h2')
+headTwo.addEventListener('wheel', (e) => {
+    e.target.classList.add('animated', 'bounceInLeft');
+    e.target.style.color = 'DeepPink'
+
+})
 
 
 
